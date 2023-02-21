@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkoutTypeModalViewController" customModule="Активный_Житель" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonLaunchWorkout" destination="rbm-bK-3Fq" id="HHM-1E-h2G"/>
+                <outlet property="iconDismissController" destination="cSZ-EN-4H7" id="hmR-IC-AKj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="554"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPO-A1-hho">
+                    <rect key="frame" x="16" y="27" width="382" height="500"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вид спорта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etB-pq-pkr">
+                            <rect key="frame" x="16" y="16" width="89.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCrossGray" translatesAutoresizingMaskIntoConstraints="NO" id="cSZ-EN-4H7">
+                            <rect key="frame" x="342" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="9tI-dQ-Cc5"/>
+                                <constraint firstAttribute="width" constant="24" id="oB1-Um-icQ"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESz-ru-aJQ">
+                            <rect key="frame" x="16" y="163.5" width="350" height="48"/>
+                            <subviews>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLd-oG-qLm" customClass="DLRadioButton" customModule="Активный_Житель">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="NZL-mm-OpM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Езда на велосипеде">
+                                        <color key="titleColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="Wop-rV-9qU"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="45p-qR-Eux"/>
+                                        <outletCollection property="otherButtons" destination="VvP-4g-awI" id="s1N-Si-E47"/>
+                                        <outletCollection property="otherButtons" destination="bsS-xr-5id" id="vMw-1v-Qsk"/>
+                                        <outletCollection property="otherButtons" destination="sRS-4O-0w6" id="Hge-5A-OKM"/>
+                                        <outletCollection property="otherButtons" destination="Ocw-9a-pbk" id="6gf-YG-kQ7"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="rof-tF-t2l"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutCycling" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-GW-v1f">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="tLd-oG-qLm" secondAttribute="trailing" constant="12" id="814-Pz-NbT"/>
+                                <constraint firstItem="bGY-GW-v1f" firstAttribute="top" secondItem="ESz-ru-aJQ" secondAttribute="top" constant="12" id="A2E-jy-TUc"/>
+                                <constraint firstAttribute="bottom" secondItem="bGY-GW-v1f" secondAttribute="bottom" constant="12" id="DR0-9u-f13"/>
+                                <constraint firstItem="tLd-oG-qLm" firstAttribute="top" secondItem="ESz-ru-aJQ" secondAttribute="top" constant="6" id="LIe-3Z-ARH"/>
+                                <constraint firstAttribute="bottom" secondItem="tLd-oG-qLm" secondAttribute="bottom" constant="6" id="Ow8-bn-SLS"/>
+                                <constraint firstItem="tLd-oG-qLm" firstAttribute="leading" secondItem="bGY-GW-v1f" secondAttribute="trailing" constant="12" id="USt-1t-im0"/>
+                                <constraint firstItem="bGY-GW-v1f" firstAttribute="leading" secondItem="ESz-ru-aJQ" secondAttribute="leading" constant="12" id="kRX-xP-lVh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-qr-Ld0">
+                            <rect key="frame" x="16" y="51.5" width="350" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutWalking" translatesAutoresizingMaskIntoConstraints="NO" id="650-Xr-jjX">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sE-rC-oXL" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="RJs-V3-Pq0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Ходьба">
+                                        <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="zaL-L7-dkF"/>
+                                        <outletCollection property="otherButtons" destination="VvP-4g-awI" id="yDb-CI-Sh3"/>
+                                        <outletCollection property="otherButtons" destination="tLd-oG-qLm" id="7Bm-qB-ohP"/>
+                                        <outletCollection property="otherButtons" destination="bsS-xr-5id" id="xjC-5D-R7T"/>
+                                        <outletCollection property="otherButtons" destination="sRS-4O-0w6" id="Nvl-ry-gGr"/>
+                                        <outletCollection property="otherButtons" destination="Ocw-9a-pbk" id="jw4-Xm-FIh"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="DkK-vd-tfJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="650-Xr-jjX" firstAttribute="leading" secondItem="cBn-qr-Ld0" secondAttribute="leading" constant="12" id="8PT-oI-ZWl"/>
+                                <constraint firstAttribute="trailing" secondItem="7sE-rC-oXL" secondAttribute="trailing" constant="12" id="N0P-Sv-5Hb"/>
+                                <constraint firstItem="650-Xr-jjX" firstAttribute="top" secondItem="cBn-qr-Ld0" secondAttribute="top" constant="12" id="YKO-Ws-oU2"/>
+                                <constraint firstItem="7sE-rC-oXL" firstAttribute="leading" secondItem="650-Xr-jjX" secondAttribute="trailing" constant="12" id="lTk-8X-Yql"/>
+                                <constraint firstItem="7sE-rC-oXL" firstAttribute="top" secondItem="cBn-qr-Ld0" secondAttribute="top" constant="6" id="p0o-SV-xYc"/>
+                                <constraint firstAttribute="bottom" secondItem="7sE-rC-oXL" secondAttribute="bottom" constant="6" id="vNe-QM-KKX"/>
+                                <constraint firstAttribute="bottom" secondItem="650-Xr-jjX" secondAttribute="bottom" constant="12" id="vdP-bS-4cm"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akt-rz-Krc">
+                            <rect key="frame" x="16" y="107.5" width="350" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutRunning" translatesAutoresizingMaskIntoConstraints="NO" id="9sK-aJ-5JR">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-4g-awI" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Rb6-Tf-zO0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Пробежка">
+                                        <color key="titleColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="vSM-qM-s2o"/>
+                                        <outletCollection property="otherButtons" destination="tLd-oG-qLm" id="AVb-Sm-dNU"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="FuB-bS-n1X"/>
+                                        <outletCollection property="otherButtons" destination="bsS-xr-5id" id="ZaV-aG-KeV"/>
+                                        <outletCollection property="otherButtons" destination="sRS-4O-0w6" id="wHl-tK-yxS"/>
+                                        <outletCollection property="otherButtons" destination="Ocw-9a-pbk" id="ton-z6-Tbr"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="WNH-rE-8Pj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="9sK-aJ-5JR" secondAttribute="bottom" constant="12" id="CFX-ly-FlW"/>
+                                <constraint firstItem="VvP-4g-awI" firstAttribute="leading" secondItem="9sK-aJ-5JR" secondAttribute="trailing" constant="12" id="EJ0-jy-DTf"/>
+                                <constraint firstAttribute="trailing" secondItem="VvP-4g-awI" secondAttribute="trailing" constant="12" id="EQ6-r5-g8l"/>
+                                <constraint firstItem="9sK-aJ-5JR" firstAttribute="top" secondItem="Akt-rz-Krc" secondAttribute="top" constant="12" id="Fe6-CJ-Jxh"/>
+                                <constraint firstItem="9sK-aJ-5JR" firstAttribute="leading" secondItem="Akt-rz-Krc" secondAttribute="leading" constant="12" id="NBm-QO-bRJ"/>
+                                <constraint firstItem="VvP-4g-awI" firstAttribute="top" secondItem="Akt-rz-Krc" secondAttribute="top" constant="6" id="iS4-Dd-3pd"/>
+                                <constraint firstAttribute="bottom" secondItem="VvP-4g-awI" secondAttribute="bottom" constant="6" id="luz-ub-Ksl"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-lA-OCV">
+                            <rect key="frame" x="16" y="219.5" width="350" height="48"/>
+                            <subviews>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-xr-5id" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Ejw-RM-yml"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Катание на коньках">
+                                        <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="9"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="mZr-QL-9iQ"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="L3N-iT-aie"/>
+                                        <outletCollection property="otherButtons" destination="VvP-4g-awI" id="YfB-Ld-M42"/>
+                                        <outletCollection property="otherButtons" destination="tLd-oG-qLm" id="K8w-wm-ofh"/>
+                                        <outletCollection property="otherButtons" destination="sRS-4O-0w6" id="iO2-Hc-cSM"/>
+                                        <outletCollection property="otherButtons" destination="Ocw-9a-pbk" id="GDC-L9-Co8"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="ZZk-mO-aGJ"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutWinterSkating" translatesAutoresizingMaskIntoConstraints="NO" id="ZSP-dB-7pS">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="bsS-xr-5id" firstAttribute="top" secondItem="eY0-lA-OCV" secondAttribute="top" constant="6" id="7mU-mu-fOU"/>
+                                <constraint firstItem="ZSP-dB-7pS" firstAttribute="leading" secondItem="eY0-lA-OCV" secondAttribute="leading" constant="12" id="EAP-Y5-W8z"/>
+                                <constraint firstAttribute="bottom" secondItem="bsS-xr-5id" secondAttribute="bottom" constant="6" id="W48-lZ-dMA"/>
+                                <constraint firstAttribute="trailing" secondItem="bsS-xr-5id" secondAttribute="trailing" constant="12" id="ZWh-Vp-gNy"/>
+                                <constraint firstItem="ZSP-dB-7pS" firstAttribute="top" secondItem="eY0-lA-OCV" secondAttribute="top" constant="12" id="ggj-Zw-RNG"/>
+                                <constraint firstAttribute="bottom" secondItem="ZSP-dB-7pS" secondAttribute="bottom" constant="12" id="qaa-XK-ZDE"/>
+                                <constraint firstItem="bsS-xr-5id" firstAttribute="leading" secondItem="ZSP-dB-7pS" secondAttribute="trailing" constant="12" id="zTE-pp-tlT"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivg-RF-6LS">
+                            <rect key="frame" x="16" y="275.5" width="350" height="48"/>
+                            <subviews>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRS-4O-0w6" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="940-vQ-NTW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Ходьба на лыжах">
+                                        <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="W3h-Md-5ct"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="dcK-j2-IQa"/>
+                                        <outletCollection property="otherButtons" destination="VvP-4g-awI" id="56l-wy-JFm"/>
+                                        <outletCollection property="otherButtons" destination="tLd-oG-qLm" id="VTF-Cq-FgB"/>
+                                        <outletCollection property="otherButtons" destination="bsS-xr-5id" id="AZ2-QJ-S3s"/>
+                                        <outletCollection property="otherButtons" destination="Ocw-9a-pbk" id="opf-EE-lIj"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="roa-fc-FK5"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutSkiing" translatesAutoresizingMaskIntoConstraints="NO" id="suH-qh-IpD">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="sRS-4O-0w6" secondAttribute="bottom" constant="6" id="8rM-pP-wyQ"/>
+                                <constraint firstItem="suH-qh-IpD" firstAttribute="leading" secondItem="Ivg-RF-6LS" secondAttribute="leading" constant="12" id="CbG-ua-bZu"/>
+                                <constraint firstItem="sRS-4O-0w6" firstAttribute="leading" secondItem="suH-qh-IpD" secondAttribute="trailing" constant="12" id="FrO-Ei-wh4"/>
+                                <constraint firstItem="sRS-4O-0w6" firstAttribute="top" secondItem="Ivg-RF-6LS" secondAttribute="top" constant="6" id="G6p-QC-HcR"/>
+                                <constraint firstAttribute="trailing" secondItem="sRS-4O-0w6" secondAttribute="trailing" constant="12" id="ahn-1m-WRo"/>
+                                <constraint firstItem="suH-qh-IpD" firstAttribute="top" secondItem="Ivg-RF-6LS" secondAttribute="top" constant="12" id="cse-Wn-7Ng"/>
+                                <constraint firstAttribute="bottom" secondItem="suH-qh-IpD" secondAttribute="bottom" constant="12" id="w19-An-hGt"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-cU-dLN">
+                            <rect key="frame" x="16" y="331.5" width="350" height="48"/>
+                            <subviews>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocw-9a-pbk" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="6a7-Lu-S5g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Ходьба на месте">
+                                        <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="11"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="4Xc-uP-Dz2"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="bnA-LG-ZkI"/>
+                                        <outletCollection property="otherButtons" destination="VvP-4g-awI" id="esr-9X-PWP"/>
+                                        <outletCollection property="otherButtons" destination="tLd-oG-qLm" id="DEg-PW-NtF"/>
+                                        <outletCollection property="otherButtons" destination="bsS-xr-5id" id="W6t-gH-qoP"/>
+                                        <outletCollection property="otherButtons" destination="sRS-4O-0w6" id="GfR-8j-6aD"/>
+                                        <outletCollection property="otherButtons" destination="el7-KH-oQw" id="4xO-cp-TVn"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutHomeWalking" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zE4-AM-xks">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="zE4-AM-xks" firstAttribute="leading" secondItem="f5b-cU-dLN" secondAttribute="leading" constant="12" id="4Vq-oA-nuM"/>
+                                <constraint firstAttribute="trailing" secondItem="Ocw-9a-pbk" secondAttribute="trailing" constant="12" id="5ij-KC-9Ch"/>
+                                <constraint firstItem="zE4-AM-xks" firstAttribute="top" secondItem="f5b-cU-dLN" secondAttribute="top" constant="12" id="6L2-7e-09G"/>
+                                <constraint firstAttribute="bottom" secondItem="zE4-AM-xks" secondAttribute="bottom" constant="12" id="GPn-Py-0la"/>
+                                <constraint firstItem="Ocw-9a-pbk" firstAttribute="leading" secondItem="zE4-AM-xks" secondAttribute="trailing" constant="12" id="JdO-ff-yQ4"/>
+                                <constraint firstItem="Ocw-9a-pbk" firstAttribute="top" secondItem="f5b-cU-dLN" secondAttribute="top" constant="6" id="QS8-QI-Dwq"/>
+                                <constraint firstAttribute="bottom" secondItem="Ocw-9a-pbk" secondAttribute="bottom" constant="6" id="fsw-td-Vwj"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbm-bK-3Fq">
+                            <rect key="frame" x="16" y="451.5" width="350" height="32.5"/>
+                            <color key="backgroundColor" red="0.38039215686274508" green="0.50588235294117645" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <state key="normal" title="Начать тренировку">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtR-Ef-vEV">
+                            <rect key="frame" x="16" y="387.5" width="350" height="48"/>
+                            <subviews>
+                                <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el7-KH-oQw" customClass="DLRadioButton">
+                                    <rect key="frame" x="48" y="6" width="290" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="bOJ-Cb-Cvg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Бег на месте">
+                                        <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="iconCheckmarkGray"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                            <integer key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logSelectedButtonWithRadioButton:" destination="-1" eventType="touchUpInside" id="yqh-Xc-qk8"/>
+                                        <outletCollection property="otherButtons" destination="7sE-rC-oXL" id="CdS-Lk-deS"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWorkoutHomeWalking" translatesAutoresizingMaskIntoConstraints="NO" id="2YX-39-m4W">
+                                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="el7-KH-oQw" secondAttribute="trailing" constant="12" id="B64-qf-sgz"/>
+                                <constraint firstAttribute="bottom" secondItem="el7-KH-oQw" secondAttribute="bottom" constant="6" id="Tm3-Ao-edR"/>
+                                <constraint firstItem="el7-KH-oQw" firstAttribute="top" secondItem="JtR-Ef-vEV" secondAttribute="top" constant="6" id="eix-bd-yxE"/>
+                                <constraint firstAttribute="bottom" secondItem="2YX-39-m4W" secondAttribute="bottom" constant="12" id="jJx-yr-Mqg"/>
+                                <constraint firstItem="2YX-39-m4W" firstAttribute="top" secondItem="JtR-Ef-vEV" secondAttribute="top" constant="12" id="siK-6u-igh"/>
+                                <constraint firstItem="2YX-39-m4W" firstAttribute="leading" secondItem="JtR-Ef-vEV" secondAttribute="leading" constant="12" id="u45-UZ-GSf"/>
+                                <constraint firstItem="el7-KH-oQw" firstAttribute="leading" secondItem="2YX-39-m4W" secondAttribute="trailing" constant="12" id="ukr-cq-uQh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rbm-bK-3Fq" secondAttribute="trailing" constant="16" id="0es-q6-XWB"/>
+                        <constraint firstItem="rbm-bK-3Fq" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="17f-sF-qEq"/>
+                        <constraint firstItem="Akt-rz-Krc" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="3pl-Az-qMR"/>
+                        <constraint firstItem="eY0-lA-OCV" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="4ic-yw-sgb"/>
+                        <constraint firstAttribute="trailing" secondItem="Ivg-RF-6LS" secondAttribute="trailing" constant="16" id="4mw-u9-o7l"/>
+                        <constraint firstAttribute="trailing" secondItem="rbm-bK-3Fq" secondAttribute="trailing" constant="16" id="5k5-L6-kDt"/>
+                        <constraint firstItem="cSZ-EN-4H7" firstAttribute="top" secondItem="YPO-A1-hho" secondAttribute="top" constant="16" id="6VA-75-0Dy"/>
+                        <constraint firstAttribute="trailing" secondItem="Akt-rz-Krc" secondAttribute="trailing" constant="16" id="Hwe-gO-O7p"/>
+                        <constraint firstAttribute="trailing" secondItem="cSZ-EN-4H7" secondAttribute="trailing" constant="16" id="IQl-ht-xDm"/>
+                        <constraint firstAttribute="trailing" secondItem="JtR-Ef-vEV" secondAttribute="trailing" constant="16" id="LOm-r7-2f3"/>
+                        <constraint firstItem="Akt-rz-Krc" firstAttribute="top" secondItem="cBn-qr-Ld0" secondAttribute="bottom" constant="8" id="Lym-LV-Bl2"/>
+                        <constraint firstAttribute="trailing" secondItem="ESz-ru-aJQ" secondAttribute="trailing" constant="16" id="M2n-uU-rvC"/>
+                        <constraint firstItem="f5b-cU-dLN" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="QyM-Rb-9I6"/>
+                        <constraint firstAttribute="trailing" secondItem="eY0-lA-OCV" secondAttribute="trailing" constant="16" id="RYK-Vk-VLx"/>
+                        <constraint firstItem="f5b-cU-dLN" firstAttribute="top" secondItem="Ivg-RF-6LS" secondAttribute="bottom" constant="8" id="Ud2-oL-mJF"/>
+                        <constraint firstItem="JtR-Ef-vEV" firstAttribute="top" secondItem="f5b-cU-dLN" secondAttribute="bottom" constant="8" id="Yr3-nc-3TE"/>
+                        <constraint firstItem="eY0-lA-OCV" firstAttribute="top" secondItem="ESz-ru-aJQ" secondAttribute="bottom" constant="8" id="b5a-jU-sAN"/>
+                        <constraint firstItem="rbm-bK-3Fq" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="ftn-xG-RAN"/>
+                        <constraint firstItem="Ivg-RF-6LS" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="gga-KX-XEq"/>
+                        <constraint firstAttribute="height" constant="500" id="ghy-Nm-kYN"/>
+                        <constraint firstAttribute="trailing" secondItem="f5b-cU-dLN" secondAttribute="trailing" constant="16" id="jgs-6M-G0v"/>
+                        <constraint firstItem="rbm-bK-3Fq" firstAttribute="top" secondItem="JtR-Ef-vEV" secondAttribute="bottom" constant="16" id="lLE-cj-Tny"/>
+                        <constraint firstItem="cBn-qr-Ld0" firstAttribute="top" secondItem="etB-pq-pkr" secondAttribute="bottom" constant="16" id="mHK-3T-KOy"/>
+                        <constraint firstItem="JtR-Ef-vEV" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="pYm-yB-Xwy"/>
+                        <constraint firstItem="ESz-ru-aJQ" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="qWZ-FZ-Cmf"/>
+                        <constraint firstItem="etB-pq-pkr" firstAttribute="top" secondItem="YPO-A1-hho" secondAttribute="top" constant="16" id="rLY-yC-opy"/>
+                        <constraint firstAttribute="trailing" secondItem="cBn-qr-Ld0" secondAttribute="trailing" constant="16" id="sZy-x8-0Uz"/>
+                        <constraint firstItem="etB-pq-pkr" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="tPB-2j-gsp"/>
+                        <constraint firstItem="Ivg-RF-6LS" firstAttribute="top" secondItem="eY0-lA-OCV" secondAttribute="bottom" constant="8" id="vix-nO-gN1"/>
+                        <constraint firstItem="cBn-qr-Ld0" firstAttribute="leading" secondItem="YPO-A1-hho" secondAttribute="leading" constant="16" id="xTB-3X-Xv7"/>
+                        <constraint firstAttribute="bottom" secondItem="rbm-bK-3Fq" secondAttribute="bottom" constant="16" id="xaX-vg-J6G"/>
+                        <constraint firstItem="ESz-ru-aJQ" firstAttribute="top" secondItem="Akt-rz-Krc" secondAttribute="bottom" constant="8" id="yGr-1a-H7I"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="0.59803082191780821" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="YPO-A1-hho" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="1Ct-sq-htq"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YPO-A1-hho" secondAttribute="bottom" constant="16" id="8D9-PM-Ak7"/>
+                <constraint firstAttribute="trailing" secondItem="YPO-A1-hho" secondAttribute="trailing" constant="16" id="LwL-di-F78"/>
+                <constraint firstItem="YPO-A1-hho" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="PaU-OX-prj"/>
+                <constraint firstItem="YPO-A1-hho" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bqR-EP-cLO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="218.30357142857142"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="7sE-rC-oXL">
+            <size key="intrinsicContentSize" width="49" height="29"/>
+        </designable>
+        <designable name="Ocw-9a-pbk">
+            <size key="intrinsicContentSize" width="113" height="29"/>
+        </designable>
+        <designable name="VvP-4g-awI">
+            <size key="intrinsicContentSize" width="69" height="29"/>
+        </designable>
+        <designable name="bsS-xr-5id">
+            <size key="intrinsicContentSize" width="133" height="29"/>
+        </designable>
+        <designable name="el7-KH-oQw">
+            <size key="intrinsicContentSize" width="88" height="29"/>
+        </designable>
+        <designable name="sRS-4O-0w6">
+            <size key="intrinsicContentSize" width="116" height="29"/>
+        </designable>
+        <designable name="tLd-oG-qLm">
+            <size key="intrinsicContentSize" width="136" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="iconCheckmarkGray" width="16" height="16"/>
+        <image name="iconCrossGray" width="24" height="24"/>
+        <image name="iconWorkoutCycling" width="24" height="24"/>
+        <image name="iconWorkoutHomeWalking" width="24" height="24"/>
+        <image name="iconWorkoutRunning" width="24" height="24"/>
+        <image name="iconWorkoutSkiing" width="24" height="24"/>
+        <image name="iconWorkoutWalking" width="24" height="24"/>
+        <image name="iconWorkoutWinterSkating" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

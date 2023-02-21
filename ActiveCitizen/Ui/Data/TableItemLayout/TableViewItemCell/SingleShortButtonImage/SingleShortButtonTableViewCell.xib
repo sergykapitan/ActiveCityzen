@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="SingleShortButtonTableViewCell" customModule="Активный_Житель" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inI-V0-GwQ">
+                        <rect key="frame" x="16" y="8" width="102" height="44"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-4j-dLg">
+                                <rect key="frame" x="16" y="8" width="40" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Текст">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="coT-0K-bG9">
+                                <rect key="frame" x="66" y="12" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="QTO-Ra-o03"/>
+                                    <constraint firstAttribute="width" constant="20" id="VgG-xg-NQf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.68235294117647061" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="coT-0K-bG9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="inI-V0-GwQ" secondAttribute="top" constant="8" id="9Bq-rp-wtc"/>
+                            <constraint firstAttribute="bottom" secondItem="GmQ-4j-dLg" secondAttribute="bottom" constant="8" id="BnO-aR-1Ue"/>
+                            <constraint firstItem="GmQ-4j-dLg" firstAttribute="top" secondItem="inI-V0-GwQ" secondAttribute="top" constant="8" id="CKE-a4-UhE"/>
+                            <constraint firstItem="coT-0K-bG9" firstAttribute="centerY" secondItem="inI-V0-GwQ" secondAttribute="centerY" id="JxV-HJ-vZt"/>
+                            <constraint firstItem="GmQ-4j-dLg" firstAttribute="leading" secondItem="inI-V0-GwQ" secondAttribute="leading" constant="16" id="Rbm-WZ-vfu"/>
+                            <constraint firstItem="coT-0K-bG9" firstAttribute="leading" secondItem="GmQ-4j-dLg" secondAttribute="trailing" constant="10" id="hor-If-gLT"/>
+                            <constraint firstAttribute="trailing" secondItem="coT-0K-bG9" secondAttribute="trailing" constant="16" id="q7d-38-wUv"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="coT-0K-bG9" secondAttribute="bottom" constant="8" id="zda-rl-St9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="inI-V0-GwQ" secondAttribute="bottom" constant="24" id="DVy-ob-hZZ"/>
+                    <constraint firstItem="inI-V0-GwQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lxS-26-auU"/>
+                    <constraint firstItem="inI-V0-GwQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="waO-sq-Anz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <connections>
+                <outlet property="labelButton" destination="GmQ-4j-dLg" id="wFp-yS-UgG"/>
+                <outlet property="labelImageView" destination="coT-0K-bG9" id="6rD-fn-3w4"/>
+                <outlet property="viewLabelButton" destination="inI-V0-GwQ" id="uNB-Q6-gHX"/>
+            </connections>
+            <point key="canvasLocation" x="15.942028985507248" y="78.348214285714278"/>
+        </tableViewCell>
+    </objects>
+</document>

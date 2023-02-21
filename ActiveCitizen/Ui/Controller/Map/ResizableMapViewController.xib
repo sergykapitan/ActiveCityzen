@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResizableMapViewController" customModule="Активный_Житель" customModuleProvider="target">
+            <connections>
+                <outlet property="imageButtonMinus" destination="HcU-CR-7vv" id="Wdi-mB-iAE"/>
+                <outlet property="imageButtonPlus" destination="0rn-x0-2SW" id="fU8-a0-Pen"/>
+                <outlet property="mapView" destination="4cT-6O-TQ4" id="Xgk-ZM-OtI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-6O-TQ4" customClass="YMKMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="qeX-sq-QRV"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconRoundButtonPlus" translatesAutoresizingMaskIntoConstraints="NO" id="0rn-x0-2SW">
+                    <rect key="frame" x="362" y="50" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Qfv-uR-5go"/>
+                        <constraint firstAttribute="width" constant="32" id="pgG-24-kzH"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconRoundButtonMinus" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-CR-7vv">
+                    <rect key="frame" x="362" y="98" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="1yi-Tz-myd"/>
+                        <constraint firstAttribute="width" constant="32" id="hba-zu-xKF"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4cT-6O-TQ4" secondAttribute="trailing" id="4s1-hu-fR1"/>
+                <constraint firstAttribute="bottom" secondItem="4cT-6O-TQ4" secondAttribute="bottom" id="7hP-bt-xQh"/>
+                <constraint firstItem="HcU-CR-7vv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="24" id="9SG-eS-cH6"/>
+                <constraint firstAttribute="trailing" secondItem="HcU-CR-7vv" secondAttribute="trailing" constant="20" id="GKo-oK-ymZ"/>
+                <constraint firstAttribute="trailing" secondItem="0rn-x0-2SW" secondAttribute="trailing" constant="20" id="TUn-tF-jRO"/>
+                <constraint firstItem="4cT-6O-TQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="blC-04-dJa"/>
+                <constraint firstItem="4cT-6O-TQ4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hGj-vW-Hte"/>
+                <constraint firstItem="0rn-x0-2SW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-24" id="mfA-8U-v4p"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-161" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconRoundButtonMinus" width="40" height="40"/>
+        <image name="iconRoundButtonPlus" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

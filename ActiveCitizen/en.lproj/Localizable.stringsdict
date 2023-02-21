@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stepscount</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_steps_count@</string>
+		<key>v1_steps_count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>%d шагов</string>
+			<key>zero</key>
+			<string>%d шагов</string>
+			<key>one</key>
+			<string>%d шаг</string>
+			<key>two</key>
+			<string>%d шага</string>
+			<key>few</key>
+			<string>%d шага</string>
+			<key>many</key>
+			<string>%d шагов</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
